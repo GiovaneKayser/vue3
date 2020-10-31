@@ -1,5 +1,5 @@
 # vue3
-
+Esse é apenas um pequeno projeto de aprendizado de vuejs 3
 ## Project setup
 ```
 npm install
