@@ -1,41 +1,19 @@
 <template>
-  <h1>DC heroes</h1>
-  <ul>
-     <li v-for="(hero,index) in dcHeros" v-bind:key="index">{{hero.name}}</li>
-  </ul>
-  <!-- <input v-model.lazy="newHero"/> -->
-  <form @submit.prevent="addHero">
-  <input v-model="newHero" placeholder="type hero name here"/>
-  <button type="submit">Add hero</button>
-  </form>
+<AppHeader/>
+  <div class="w-full flex">
+    <!-- <DcHeros/> -->
+    <Calendar/>
+  </div>
 </template>
 
 <script>
+import AppHeader from "./components/AppHeader"
+import Calendar from "./components/Calendar"
+// import DcHeros from "./components/DcHeros"
 export default {
-    data(){
-        return {
-
-            newHero:"",
-            dcHeros:[
-                {name:'SuperGirl'},
-                {name:'Flash'},
-                {name:'Batman'},
-                {name:'Arrow'},
-                {name:'SuperMan'}
-                ]
-        }
-    },
-    methods:{
-        addHero(){
-            if (this.newHero !== ""){
-                this.dcHeros.push({name: this.newHero}); this.newHero=''
-            }
-            
-        }
-    }
-}
+  components:{AppHeader,Calendar},
+ 
+};
 </script>
 
-<style>
-
-</style>
+<style></style>
